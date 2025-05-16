@@ -111,14 +111,14 @@ def main():
             import shutil
             shutil.rmtree(clone_dir)
 
-        print(f"Klonlanıyor: {args.git_url}")
+        print(f"Cloning: {args.git_url}")
         git_utils.clone_repo(args.git_url, clone_dir)
         code_files = load_code_from_local(clone_dir)
 
     elif args.local_file:
         code_files = load_code_from_local(args.local_file)
     else:
-        print("Error: --git-url veya --local-file parametresi gerekli.")
+        print("Error: --git-url or --local-file parameter is required")
         sys.exit(1)
 
     all_results = []
