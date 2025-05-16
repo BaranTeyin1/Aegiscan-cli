@@ -22,6 +22,16 @@ git clone <repo-url>
 cd aegiscan-cli
 pip install -r requirements.txt
 ```
+
+## Usage
+```bash
+python main.py --git-url <git-repo-url> --rules <rules-folder> --output results.json --severity HIGH
+```
+## Example
+```bash
+python main.py --local-file ./myproject --rules ./rules --output results.txt
+```
+
 ## Contributing
 
 This project is open source. Feel free to submit issues or pull requests!
