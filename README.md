@@ -21,4 +21,7 @@ It scans Python code via the command line and detects potential security vulnera
 git clone <repo-url>
 cd aegiscan-cli
 pip install -r requirements.txt
+```
+## Contributing
 
+This project is open source. Feel free to submit issues or pull requests!
