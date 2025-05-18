@@ -1,0 +1,12 @@
+- id: jinja2-template-injection
+  name: Jinja2 Template Injection via User Input
+  description: Detects when user input is directly rendered in templates, which can lead to Server-Side Template Injection (SSTI).
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: render_template_string
+    pattern_contains: "user_input"
+  - node_type: Call
+    func_name: Template
+    pattern_contains: "user_input"

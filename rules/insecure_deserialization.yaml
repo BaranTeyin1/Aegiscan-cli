@@ -1,0 +1,12 @@
+- id: insecure-pickle-deserialization
+  name: Pickle Deserialization with Untrusted Data
+  description: Detects use of pickle.load or pickle.loads with untrusted input, which can lead to code execution.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: pickle.load
+    pattern_contains: "user_input"
+  - node_type: Call
+    func_name: pickle.loads
+    pattern_contains: "user_input"

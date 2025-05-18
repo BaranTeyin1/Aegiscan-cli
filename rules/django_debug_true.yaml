@@ -1,0 +1,8 @@
+- id: django-debug-true
+  name: Django Debug Mode Enabled
+  description: Detects if Django DEBUG setting is set to True, which should be disabled in production environments.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Assign
+    pattern_contains: "DEBUG = True"

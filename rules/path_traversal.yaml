@@ -1,0 +1,12 @@
+- id: path-traversal
+  name: Path Traversal Vulnerability
+  description: Detects potential path traversal where user input is used in file paths without proper sanitization.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: open
+    pattern_contains: "user_input"
+  - node_type: Call
+    func_name: os.path.join
+    pattern_contains: "user_input"

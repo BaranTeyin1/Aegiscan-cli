@@ -1,0 +1,8 @@
+- id: django-allowed-hosts-wildcard
+  name: Django ALLOWED_HOSTS Misconfiguration
+  description: Detects when Django's ALLOWED_HOSTS is set to wildcard (*), which can allow host header attacks.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Assign
+    pattern_contains: "ALLOWED_HOSTS = ['*']"

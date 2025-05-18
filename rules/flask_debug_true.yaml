@@ -1,0 +1,9 @@
+- id: flask-debug-true
+  name: Flask Debug Mode Enabled
+  description: Detects when Flask app is run with debug mode enabled, which should not be used in production.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: run
+    pattern_contains: "debug=True"

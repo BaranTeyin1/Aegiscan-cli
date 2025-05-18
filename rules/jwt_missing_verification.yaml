@@ -1,0 +1,12 @@
+- id: jwt-missing-verification
+  name: JWT Without Signature Verification
+  description: Detects decoding JWT tokens without verifying the signature.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: jwt.decode
+    pattern_contains: "verify=False"
+  - node_type: Call
+    func_name: jwt.decode
+    pattern_contains: "options={'verify_signature': False}"

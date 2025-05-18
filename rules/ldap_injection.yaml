@@ -1,0 +1,12 @@
+q- id: ldap-injection
+  name: LDAP Injection via User Input
+  description: Detects unsafe LDAP query construction using user input.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: search_s
+    pattern_contains: "user_input"
+  - node_type: Call
+    func_name: search
+    pattern_contains: "user_input"

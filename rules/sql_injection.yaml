@@ -1,0 +1,9 @@
+- id: sql-injection-raw-query
+  name: SQL Injection via Raw Query and User Input
+  description: Detects raw SQL queries constructed using user input, which may lead to SQL injection.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: execute
+    pattern_contains: "user_input"

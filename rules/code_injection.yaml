@@ -1,0 +1,9 @@
+- id: eval-injection
+  name: Code Execution via eval()
+  description: Detects usage of eval() with user-controlled input, leading to arbitrary code execution.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: eval
+    pattern_contains: "user_input"

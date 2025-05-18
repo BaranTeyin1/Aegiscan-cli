@@ -1,0 +1,19 @@
+- id: command-injection-subprocess
+  name: Command Injection via os.system / subprocess
+  description: Detects potential command injection when using os.system or subprocess with user input.
+  severity: HIGH
+  author: Arthur
+  matches:
+  - node_type: Call
+    func_name: os.system
+    pattern_contains: "user_input"
+  - node_type: Call
+    func_name: subprocess.call
+    pattern_contains: "user_input"
+  - node_type: Call
+    func_name: subprocess.run
+    pattern_contains: "user_input"
+  - node_type: Call
+    func_name: subprocess.Popen
+    pattern_contains: "user_input"
+

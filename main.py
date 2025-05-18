@@ -91,8 +91,8 @@ def main():
     parser.add_argument("--local-file", type=str, help="Local directory of previously cloned repo")
     parser.add_argument("--rules", type=str, default=None, help="Directory containing static analysis rules")
     parser.add_argument("--output", type=str, default=None, help="Output file path for results")
-    parser.add_argument("--severity", type=str, choices=["LOW", "MEDIUM", "HIGH", "CRITICAL"],
-                        help="Filter results by severity level")
+    parser.add_argument("--severity", type=str, choices=["LOW", "MEDIUM", "HIGH", "CRITICAL"], help="Filter results by severity level")
+    parser.add_argument("-ai", type=str, help="Activate AI-assisted rule generation.")
 
     args = parser.parse_args()
 
