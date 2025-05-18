@@ -18,7 +18,7 @@ It scans Python code via the command line and detects potential security vulnera
 ## Installation
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/BaranTeyin1/Aegiscan-cli
 cd aegiscan-cli
 pip install -r requirements.txt
 ```
